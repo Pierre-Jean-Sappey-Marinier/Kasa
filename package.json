@@ -1,0 +1,19 @@
+{
+  "name": "kasa",
+  "version": "1.0.0",
+  "description": "Leader en location d'appartements entre particuliers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pierre-Jean-Sappey-Marinier/Kasa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pierre-Jean-Sappey-Marinier/Kasa/issues"
+  },
+  "homepage": "https://github.com/Pierre-Jean-Sappey-Marinier/Kasa#readme"
+}
