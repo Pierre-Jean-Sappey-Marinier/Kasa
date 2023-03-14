@@ -1,0 +1,35 @@
+.apropos {
+  position: relative;
+  margin-right: 50px;
+  justify-content: flex-end;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+  color: #ff6060;
+}
+
+.apropos:hover {
+  border-bottom-color: #0065fc;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+}
+
+.accueil {
+  position: relative;
+  display: flex;
+  margin-right: 70px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+  color: #ff6060;
+}
+
+.accueil:hover {
+  border-bottom-color: #0065fc;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+}

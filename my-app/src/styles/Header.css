@@ -1,0 +1,12 @@
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aqua; */
+  padding-top: 40px;
+}
+
+nav {
+  display: flex;
+}
