@@ -7,7 +7,13 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {data.map((data) => {
-        return <Card id={data.id} cover={data.cover} title={data.title} />;
+        return (
+          <>
+            <a href="#" className="box">
+              <Card id={data.id} cover={data.cover} title={data.title} />
+            </a>
+          </>
+        );
       })}
     </div>
   );

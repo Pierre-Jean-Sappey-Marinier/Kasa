@@ -1,5 +1,14 @@
+/* .img_gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .banner {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 20px;
   width: 100%;
   height: 100%;
@@ -24,8 +33,6 @@ h1 {
   top: -50%;
   left: 23%; */
   position: absolute;
-  bottom: 80px;
-  left: 314px;
 
   color: white;
   font-family: "Montserrat";

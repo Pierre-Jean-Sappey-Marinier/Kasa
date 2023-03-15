@@ -15,6 +15,7 @@ body {
   font-weight: 400;
   position: relative;
   max-width: 1400px;
+  /* height: 6000px; */
   margin: auto;
-  background-color: rgba(51, 82, 112, 0.636);
+  background-color: rgba(16, 16, 16, 0.636);
 }
