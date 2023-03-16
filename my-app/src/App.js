@@ -1,14 +1,15 @@
 import "./styles/App.css";
-import Header from "./composants/Header";
-import Banner from "./composants/Banner";
-import Gallery from "./composants/Gallery";
-import Footer from "./composants/Footer";
-import Home from "./composants/HomesPage";
-import PageLogement from "./composants/PageLogement";
+import Header from "./components/Header/Header";
+import Banner from "./components/Banner/Banner";
+import Gallery from "./components/Gallery/Gallery";
+import Footer from "./components/Footer/Footer";
+import Home from "./components/Pages/HomesPage";
+import Logement from "./components/Pages/PageLogement";
+
 function App() {
   return (
     <div className="App">
-      <PageLogement />
+      <Home />
     </div>
   );
 }

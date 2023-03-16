@@ -1,6 +1,6 @@
-import "../styles/PageLogement.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import "./PageLogement.css";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function Logement() {
   return (

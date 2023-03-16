@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
-import data from "../data/data.json";
-import "../styles/Gallery.css";
+import Card from "../Card/Card";
+import data from "../../data/data.json";
+import "./Gallery.css";
 
 const Gallery = () => {
   return (

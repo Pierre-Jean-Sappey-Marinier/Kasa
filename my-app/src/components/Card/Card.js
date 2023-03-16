@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/Gallery.css";
+import "../Gallery/Gallery.css";
 const Card = ({ title, id, cover }) => {
   return (
     <div id={id} className="img_gallery">
-      <img className="image" src={cover} alt="background" />
+      <img className="image" src={cover} alt="" />
       <h2>{title}</h2>
     </div>
   );

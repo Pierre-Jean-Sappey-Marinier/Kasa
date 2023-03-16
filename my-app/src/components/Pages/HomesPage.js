@@ -1,7 +1,7 @@
-import Header from "./Header";
-import Banner from "./Banner";
-import Gallery from "./Gallery";
-import Footer from "./Footer";
+import Header from "../Header/Header";
+import Banner from "../Banner/Banner";
+import Gallery from "../Gallery/Gallery";
+import Footer from "../Footer/Footer";
 function Home() {
   return (
     <div className="Home">

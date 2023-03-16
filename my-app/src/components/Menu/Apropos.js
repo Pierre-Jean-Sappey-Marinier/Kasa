@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Apropos.css";
+import "./Apropos.css";
 function Apropos() {
   return (
     <nav>
