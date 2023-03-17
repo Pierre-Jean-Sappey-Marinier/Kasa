@@ -1,3 +1,5 @@
+@import "../../styles/App.scss";
+
 .apropos {
   position: relative;
   margin-right: 50px;
@@ -7,7 +9,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
-  color: #ff6060;
+  color: $saumon;
 }
 
 .apropos:hover {
@@ -23,7 +25,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
-  color: #ff6060;
+  color: $saumon;
 }
 
 .accueil:hover {

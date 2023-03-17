@@ -3,7 +3,7 @@ import k from "./../../assets/k.png";
 import house from "./../../assets/house.png";
 import s from "./../../assets/s.png";
 import a from "./../../assets/a.png";
-import "./logo.css";
+import "./logo.scss";
 
 const logo = () => {
   return (

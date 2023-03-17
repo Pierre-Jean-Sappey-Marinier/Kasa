@@ -1,5 +1,5 @@
 import React from "react";
-import "../Gallery/Gallery.css";
+import "../Gallery/Gallery.scss";
 const Card = ({ title, id, cover }) => {
   return (
     <div id={id} className="img_gallery">

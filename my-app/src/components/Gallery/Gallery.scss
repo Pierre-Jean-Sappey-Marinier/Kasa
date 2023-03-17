@@ -1,3 +1,5 @@
+@import "../../styles/App.scss";
+
 .img_gallery {
   position: relative;
   display: flex;
@@ -19,10 +21,11 @@ a {
   height: 360px;
   border-radius: 25px;
   filter: drop-shadow(8px 8px 10px gray);
-}
-.image:hover {
-  filter: grayscale(80%);
-  filter: brightness(40%);
+
+  &:hover {
+    filter: grayscale(80%);
+    filter: brightness(40%);
+  }
 }
 
 .gallery {
@@ -34,34 +37,32 @@ a {
   /* gap: 2% 2%; */
   width: 100%;
   height: auto;
-  background: #f7f7f7;
+  background: $white;
   padding: 50px;
   border-radius: 25px;
   margin-top: 43px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 h2 {
   position: absolute;
   width: 74%;
   margin: 250px 50px 0px 20px;
-  color: rgb(255, 255, 255);
+  color: $white;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 142.6%;
-}
 
-.h2:hover {
-  filter: grayscale(80%);
-  filter: brightness(40%);
-}
-
-@media screen and (max-width: 767px) {
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0px;
-    padding-right: 0px;
+  &:hover {
+    filter: grayscale(80%);
+    filter: brightness(40%);
   }
 }

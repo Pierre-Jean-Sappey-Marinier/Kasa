@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import Apropos from "../Menu/Apropos";
-import "./Header.css";
+import "./Header.scss";
 const Header = () => {
   return (
     <header>
