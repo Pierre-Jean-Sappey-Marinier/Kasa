@@ -4,22 +4,22 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: black;
-  width: 100%;
+  margin-top: 20px;
   height: 210px;
   border-radius: 25px;
-}
 
-.logo_footer {
-  color: white;
-  filter: grayscale(100%) brightness(1.7);
-}
+  .logo_footer {
+    color: white;
+    filter: grayscale(100%) brightness(1.7);
 
-img {
-  color: white;
-  content: "\f005";
-}
+    img {
+      color: white;
+      content: "\f005";
+    }
+  }
 
-p {
-  color: white;
-  padding-top: 20px;
+  p {
+    color: white;
+    padding-top: 20px;
+  }
 }

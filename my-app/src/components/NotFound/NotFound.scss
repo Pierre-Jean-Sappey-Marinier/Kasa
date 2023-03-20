@@ -1,0 +1,50 @@
+@import "../../styles/App.scss";
+
+.not_found {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .oups {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    position: relative;
+    padding-top: 50px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 142.6%;
+    color: $saumon;
+  }
+  p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+    color: $saumon;
+  }
+
+  .home {
+    position: relative;
+    padding-top: 180px;
+    justify-content: flex-end;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: $saumon;
+  }
+
+  .home:hover {
+    text-decoration: underline;
+  }
+}

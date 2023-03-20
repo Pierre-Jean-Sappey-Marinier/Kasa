@@ -1,11 +1,13 @@
 import React from "react";
-import background from "../../assets/background.png";
 import "./banner.scss";
-const Banner = () => {
+const Banner = (props) => {
+  const image = props.image;
+  const isText = props.isText;
   return (
     <div className="banner">
-      <img className="background" src={background} alt="background" />
-      <h1>Chez vous, partout et ailleurs</h1>
+      <img className="background" src={image} alt="background" />
+
+      <h1>{isText ? "Chez vous, partout et ailleurs" : ""}</h1>
     </div>
   );
 };
