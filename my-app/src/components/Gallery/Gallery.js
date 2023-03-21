@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../Card/Card";
 import data from "../../data/data.json";
 import "./Gallery.scss";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   return (
@@ -9,9 +10,9 @@ const Gallery = () => {
       {data.map((data) => {
         return (
           <>
-            <a href="#" className="box">
+            <Link to={`/users/${data.id}`} className="linkToCard">
               <Card id={data.id} cover={data.cover} title={data.title} />
-            </a>
+            </Link>
           </>
         );
       })}
