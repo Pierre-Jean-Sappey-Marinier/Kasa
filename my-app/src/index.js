@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     element: <FourHundredFourPage />,
   },
   {
-    path: "/appartments/:id",
+    path: "/appartements/:id",
     element: <ProfilePage />,
   },
   // {
