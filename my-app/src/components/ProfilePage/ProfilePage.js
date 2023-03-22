@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Carousel from "./Caroussel";
-import "./Caroussel.scss";
+import ProfilePageInformation from "./ProfilePageInformations";
 const ProfilePage = () => {
   // console.log(useParams());
   let { id } = useParams();
@@ -13,6 +13,7 @@ const ProfilePage = () => {
     <>
       <Header />
       <Carousel />
+      <ProfilePageInformation />
       <Footer />
     </>
   );

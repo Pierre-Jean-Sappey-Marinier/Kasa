@@ -6,13 +6,14 @@ import Rule from "./Rule";
 const Collapse = (data) => {
   return (
     <div>
-      {aproposData.map((data) => {
+      {aproposData.map((rule, index) => {
         return (
           <>
             <Rule
-              id={data.id}
-              description={data.description}
-              title={data.title}
+              key={rule.id}
+              id={rule.id}
+              description={rule.description}
+              title={rule.title}
             />
           </>
         );

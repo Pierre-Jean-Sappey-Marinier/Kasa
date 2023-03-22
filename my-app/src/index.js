@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     path: "/home",
     element: <Home />,
   },
-
+  //
   {
     path: "/banner",
     element: <Banner />,
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
     element: <AProposPage />,
   },
   {
-    path: "*",
-    element: <FourHundredFourPage />,
-  },
-  {
     path: "/appartements/:id",
     element: <ProfilePage />,
+  },
+  {
+    path: "*",
+    element: <FourHundredFourPage />,
   },
   // {
   //   path: `/users/${data.id}`,

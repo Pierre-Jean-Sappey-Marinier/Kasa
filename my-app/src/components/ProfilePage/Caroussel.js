@@ -8,23 +8,9 @@ const Carousel = () => {
   //let { id } = useParams();
   let { id: paramId } = useParams();
 
-  // let dataLocale;
-  // for (let i = 0; i < data.length; i++) {
-  //   if (id === data[i].id) {
-  //     dataLocale = data[i];
-  //     break;
-  //   }
-  //   // console.log("1", { id }.id === data[i].id);
-  //   // console.log("2", { id }.id);
-  //   // console.log("3", data[i].id);
-  //   // console.log("4", typeof data[i].id);
-  //   // console.log("5", typeof { id }.id);
-  // }
-
   const dataLocale = data.find(({ id }) => id === paramId);
   //const dataLocale = data.find(({ id: itemId }) => itemId === id);
   //const dataLocale = data.find((item) => item.id === id);
-  console.log(dataLocale);
   const length = dataLocale.pictures.length;
 
   const previousImage = () => {
