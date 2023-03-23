@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Collapse.scss";
-import aproposData from "../../data/aproposData.json";
-import Rule from "./Rule";
 
-const Collapse = (data) => {
+const Collapse = ({ id, description, title }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
   return (
-    <div>
-      {aproposData.map((rule, index) => {
-        return (
-          <>
-            <Rule
-              key={rule.id}
-              id={rule.id}
-              description={rule.description}
-              title={rule.title}
-            />
-          </>
-        );
-      })}
-    </div>
+    <>
+      <div key={id} className="expander">
+        <div className="collapse_title expander-summary" onClick={toggle}>
+          {title}
+        </div>
+        <div
+          className={
+            isOpen ? `collapse_content content` : "collapse_content_hidden "
+          }
+        >
+          {description}
+        </div>
+      </div>
+    </>
   );
 };
 

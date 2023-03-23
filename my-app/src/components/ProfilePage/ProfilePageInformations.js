@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "./ProfilePageInformation.scss";
 import data from "../../data/data.json";
 import StarRating from "./StarRating";
-import Collapse from "../Collapse/Collapse";
+import CollaspseOnClick from "../Collapse/CollapseOnClick";
 const ProfilePageInformations = () => {
   let { id: paramId } = useParams();
 
@@ -28,7 +28,7 @@ const ProfilePageInformations = () => {
           <StarRating rating={dataLocale.rating} />
         </>
         <div>
-          <Collapse />
+          <CollaspseOnClick />
         </div>
       </div>
     </>

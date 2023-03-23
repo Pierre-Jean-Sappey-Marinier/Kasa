@@ -1,5 +1,7 @@
 @import "../../styles/App.scss";
-
+.collapse_content_hidden {
+  display: none;
+}
 .expander {
   display: block;
   border: 0;
@@ -14,10 +16,12 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
+  border-radius: 5px;
 
   .expander-summary {
     border-radius: 20px;
     padding: 6px 0 6px 20px;
+    border-radius: 5px;
   }
 }
 details {
@@ -29,31 +33,6 @@ details {
   padding: 20px 20px 20px 20px;
   font-weight: 400;
   font-size: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-
-// .deque-expander .deque-expander-summary:hover {
-//   cursor: default;
-//   outline: 1px solid #990000;
-//   background-color: rgba(0, 0, 0, 0.1);
-// }
-// .deque-expander .deque-expander-summary:active {
-//   cursor: default;
-//   background: rgba(0, 0, 0, 0.3);
-//   outline: 1px solid #990000;
-// }
-// .deque-expander .deque-expander-summary:focus {
-//   outline: 1px dashed #000000;
-//   background: rgba(0, 0, 0, 0.1);
-// }
-// .deque-expander .deque-expander-content {
-//   clear: both;
-//   padding: 14px 36px 14px 12px;
-// }
-// .deque-expander
-//   .deque-expander-summary[aria-expanded="true"]
-//   .toggle-indicator:before,
-// .deque-expander.open
-//   .deque-expander-summary[aria-expanded="true"]
-//   .toggle-indicator:before {
-//   content: "\E70E";
-// }
