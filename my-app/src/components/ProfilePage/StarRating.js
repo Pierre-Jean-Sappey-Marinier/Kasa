@@ -1,43 +1,35 @@
 import React from "react";
 import star from "../../assets/star.png";
+import stargrey from "../../assets/stargrey.png";
 
 const StarRating = ({ rating }) => {
-  // console.log("🚀 ~ file: StarRating.js:4 ~ StarRating ~ rating:", rating);
-
-  for (let i = 0; i <= rating; i++) {
-    <div className="star-wrapper">
-      <img key={rating} alt="" className="gold-star" src={star} />
-    </div>;
-  }
-
-  const etoile = (
+  const goldEtoile = (
     <div className="star-wrapper">
       <img key={rating} alt="" className="gold-star" src={star} />
     </div>
   );
 
-  const etoiles = [];
+  const greyEtoile = (
+    <div className="star-wrapper">
+      <img key={rating} alt="" className="gold-star" src={stargrey} />
+    </div>
+  );
 
-  for (let i = 0; i <= rating; i++) {
-    etoiles[i] = etoile;
-    //etoiles.push(etoile);
-    console.log(i);
+  const etoiles = [];
+  console.log("🚀 ~ file: StarRating.js:25 ~ StarRating ~ etoiles:", etoiles);
+
+  // for (let i = 0; i <= rating; i++) {
+  //   etoiles[i] = goldEtoile;
+  // }
+
+  // for (let i = etoiles.length; i < 5; i++) {
+  //   etoiles[i] = greyEtoile;
+  // }
+
+  for (let i = 1; i <= 5; i++) {
+    etoiles.push(i <= rating ? goldEtoile : greyEtoile);
   }
 
   return etoiles;
-
-  console.log(etoile);
-  // {
-  //   const totalStars = 5;
-  //   const activeStars = { rating };
-
-  //   return (
-  //     <span>
-  //       {[1, 2, 3, 4, 5].map((value) => (
-  //         <img key={rating} alt="" className="star" src={star} />
-  //       ))}
-  //     </span>
-  //   );
-  // }
 };
 export default StarRating;

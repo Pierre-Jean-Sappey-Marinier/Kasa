@@ -7,17 +7,21 @@ const Collapse = ({ id, description, title }) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <>
-      <div key={id} className="expander">
+      <div key={id} className={`expander ${title}`}>
         <div className="collapse_title expander-summary" onClick={toggle}>
           {title}
         </div>
-        <div
+        <ul
           className={
             isOpen ? `collapse_content content` : "collapse_content_hidden "
           }
         >
-          {description}
-        </div>
+          <p>{<p>{description}</p>}</p>
+          {/* {console.log(
+            "🚀 ~ file: Collapse.js:20 ~ Collapse ~ description:",
+            description
+          )} */}
+        </ul>
       </div>
     </>
   );

@@ -1,0 +1,111 @@
+@import "../../styles/App.scss";
+
+.infos {
+  .title-location-tags {
+    position: relative;
+    // display: flex;
+    // gap: 50px;
+    // justify-content: center;
+    // align-items: center;
+  }
+  .title {
+    position: relative;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+    color: $saumon;
+  }
+  .location {
+    position: relative;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: $saumon;
+  }
+  .tags {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+    color: white;
+    padding-top: 20px;
+    // margin-bottom: 40px;
+  }
+
+  .tag {
+    position: relative;
+    border-radius: 10px;
+    background-color: $saumon;
+    padding: 3px 40px 3px 40px;
+  }
+  .name-and-picture {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 560px;
+    justify-content: right;
+    align-items: center;
+  }
+  .identité {
+    display: flex;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: $saumon;
+    gap: 10px;
+    align-items: center;
+  }
+  .name {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 142.6%;
+  }
+  .picture {
+    border-radius: 100px;
+  }
+
+  .stars {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+  }
+
+  .collapse-description-equipment {
+    display: block;
+  }
+  .description-equipment {
+    display: flex;
+
+    gap: 50px;
+    justify-content: center;
+
+    .collaspe_description {
+      width: 400px;
+      height: 100%;
+    }
+    .collapse_title {
+      width: 582px;
+    }
+
+    .collapse_content {
+      width: 582px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 142.6%;
+    }
+  }
+}

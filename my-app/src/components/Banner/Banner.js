@@ -7,7 +7,7 @@ const Banner = (props) => {
     <div className="banner">
       <img className="background" src={image} alt="" />
 
-      <h1>{isText ? "Chez vous, partout et ailleurs" : ""}</h1>
+      <h1>{isText ? "Chez vous, partout et ailleurs" : "A propos"}</h1>
     </div>
   );
 };
