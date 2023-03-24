@@ -14,7 +14,9 @@ const Collapse = ({ id, description, title }) => {
         </div>
         <ul
           className={
-            isOpen ? `collapse_content content` : "collapse_content_hidden "
+            isOpen
+              ? `collapse_content content aria-expanded="true"`
+              : `collapse_content_hidden aria-expanded="false" `
           }
         >
           {Array.isArray(description) ? (

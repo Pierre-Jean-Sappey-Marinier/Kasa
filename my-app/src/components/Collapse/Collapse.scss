@@ -17,11 +17,14 @@
   font-size: 24px;
   line-height: 142.6%;
   border-radius: 5px;
+  transition: width 2s ease;
 
   .expander-summary {
     border-radius: 20px;
     padding: 6px 0 6px 20px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: width 2s ease;
   }
   ul {
     list-style-type: none;
@@ -32,7 +35,7 @@ details {
 }
 .content {
   display: block;
-
+  transition: width 2s ease;
   background: $grey;
   color: $saumon;
   padding: 20px 20px 20px 20px;
@@ -40,4 +43,10 @@ details {
   font-size: 20px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  transition: opacity 0.15s linear;
+  -webkit-transition: opacity 0.15s linear;
+}
+.collapse_content content {
+  transition: opacity 0.15s linear;
+  -webkit-transition: opacity 0.15s linear;
 }
