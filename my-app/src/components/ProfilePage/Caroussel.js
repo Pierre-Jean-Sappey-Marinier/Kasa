@@ -27,7 +27,10 @@ const Carousel = () => {
     <div className="carousel">
       {dataLocale.pictures.map((urlImage, indexImage) => {
         return (
-          <div className={indexImage === index ? "slide active" : "slide"}>
+          <div
+            key={`${urlImage}${indexImage}`}
+            className={indexImage === index ? "slide-active" : "slide"}
+          >
             {indexImage === index && (
               <img className="bang" src={urlImage} alt="" index={index} />
             )}

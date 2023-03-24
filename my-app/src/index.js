@@ -18,7 +18,7 @@ import {
   Routes,
   useParams,
 } from "react-router-dom";
-import Apropos from "./components/Menu/Apropos";
+import Nav from "./components/Nav/Nav";
 
 const router = createBrowserRouter([
   {

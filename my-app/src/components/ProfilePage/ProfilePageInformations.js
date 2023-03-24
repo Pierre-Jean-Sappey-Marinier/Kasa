@@ -13,6 +13,10 @@ const ProfilePageInformations = () => {
   // const dataLocale = data.find((item) => item.id === id);
   const length = dataLocale.pictures.length;
 
+  // if (Array.isArray(dataLocale.equipments)) {
+
+  // }
+  // console.log();
   return (
     <section className="infos">
       <div className="title-location-tags">

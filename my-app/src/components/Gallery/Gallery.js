@@ -9,11 +9,20 @@ const Gallery = () => {
     <div className="gallery">
       {data.map((data) => {
         return (
-          <>
-            <Link to={`/appartements/${data.id}`} className="linkToCard">
-              <Card id={data.id} cover={data.cover} title={data.title} />
+          <React.Fragment key={data.id}>
+            <Link
+              key={data.id}
+              to={`/appartements/${data.id}`}
+              className="linkToCard"
+            >
+              <Card
+                key={data.id}
+                id={data.id}
+                cover={data.cover}
+                title={data.title}
+              />
             </Link>
-          </>
+          </React.Fragment>
         );
       })}
     </div>

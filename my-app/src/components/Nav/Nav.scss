@@ -10,10 +10,12 @@ nav {
     font-size: 24px;
     line-height: 142.6%;
     color: $saumon;
-  }
-
-  .apropos:hover {
-    text-decoration: underline;
+    &.active {
+      text-decoration: underline;
+    }
+    .apropos:hover {
+      text-decoration: underline;
+    }
   }
 
   .accueil {
@@ -26,10 +28,12 @@ nav {
     font-size: 24px;
     line-height: 142.6%;
     color: $saumon;
-  }
-
-  .accueil:hover {
-    text-decoration: underline;
+    &.active {
+      text-decoration: underline;
+    }
+    .accueil:hover {
+      text-decoration: underline;
+    }
   }
 
   @media screen and (max-width: 767px) {

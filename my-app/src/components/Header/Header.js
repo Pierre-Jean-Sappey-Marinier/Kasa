@@ -1,12 +1,12 @@
 import React from "react";
 import Logo from "../Logo/Logo";
-import Apropos from "../Menu/Apropos";
+import Nav from "../Nav/Nav";
 import "./Header.scss";
 const Header = () => {
   return (
     <header>
       <Logo />
-      <Apropos />
+      <Nav />
     </header>
   );
 };

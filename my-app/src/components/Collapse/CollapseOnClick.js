@@ -6,23 +6,16 @@ import Collapse from "./Collapse";
 import data from "../../data/data.json";
 
 function CollaspseOnClick({ props }) {
-  // let { id: paramId } = useParams();
-
-  // const dataLocale = data.find(({ id }) => id === paramId);
-  //const dataLocale = data.find(({ id: itemId }) => itemId === id);
-  //const dataLocale = data.find((item) => item.id === id);
-
   return (
     <>
       {props.map((rule) => {
         return (
-          <>
-            <Collapse
-              id={rule.id}
-              description={rule.description}
-              title={rule.title}
-            />
-          </>
+          <Collapse
+            key={rule.id}
+            id={rule.id}
+            description={rule.description}
+            title={rule.title}
+          />
         );
       })}
     </>
