@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Slider2.scss";
 import data from "../../data/data.json";
+import arrow from "../../assets/arrow.png";
 // import "./Caroussel.scss";
 
 function Slider() {
@@ -44,12 +45,8 @@ function Slider() {
   ///////////////
   return (
     <div className="slider">
-      <button className="left-arrow" onClick={prevSlide}>
-        avant
-      </button>
-      <button className="right-arrow" onClick={nextSlide}>
-        Prochain
-      </button>
+      <img src={arrow} className="left-arrow" onClick={prevSlide} />
+
       {dataLocale.pictures.map((urlImage, indexImage) => {
         return (
           <div
@@ -67,6 +64,7 @@ function Slider() {
           </div>
         );
       })}
+      <img src={arrow} className="right-arrow" onClick={nextSlide} />
     </div>
   );
 }

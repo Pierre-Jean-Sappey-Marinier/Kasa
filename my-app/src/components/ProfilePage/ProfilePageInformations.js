@@ -13,36 +13,44 @@ const ProfilePageInformations = () => {
   // const dataLocale = data.find((item) => item.id === id);
   const length = dataLocale.pictures.length;
 
-  // if (Array.isArray(dataLocale.equipments)) {
-
-  // }
-  // console.log();
+  if (Array.isArray(dataLocale.equipments)) {
+  }
+  console.log();
   return (
     <section className="infos">
       <div className="title-location-tags">
-        <div className="title"> {dataLocale.title} </div>
+        <div className="title-picture">
+          <div className="title"> {dataLocale.title} </div>
+          <div className="name-and-picture">
+            <div className="identité">
+              <div className="name"> {dataLocale.host.name} </div>
+              <picture className="picture_content">
+                <img
+                  className="picture"
+                  src={dataLocale.host.picture}
+                  alt="Logo"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
         <div className="location">{dataLocale.location}</div>
-        <div className="tags">
-          {dataLocale.tags.map((tag, i) => {
-            return (
-              <p key={i} className="tag">
-                {tag}
-              </p>
-            );
-          })}
+        <div className="tags-star">
+          <div className="tags">
+            {dataLocale.tags.map((tag, i) => {
+              return (
+                <p key={i} className="tag">
+                  {tag}
+                </p>
+              );
+            })}
+          </div>
+          <div className="stars">
+            <StarRating className="star" rating={dataLocale.rating} />
+          </div>
         </div>
       </div>
-      <div className="name-and-picture">
-        <div className="identité">
-          <div className="name"> {dataLocale.host.name} </div>
-          <picture className="picture_content">
-            <img className="picture" src={dataLocale.host.picture} alt="Logo" />
-          </picture>
-        </div>
-      </div>
-      <div className="stars">
-        <StarRating className="star" rating={dataLocale.rating} />
-      </div>
+
       <div className="collapse-description-equipment">
         <div className="description-equipment">
           <Collaspse
