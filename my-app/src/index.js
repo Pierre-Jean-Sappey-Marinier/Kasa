@@ -17,6 +17,10 @@ import {
   Router,
   Routes,
   useParams,
+  isRouteErrorResponse,
+  action,
+  json,
+  useRouteError,
 } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 
@@ -42,16 +46,26 @@ const router = createBrowserRouter([
   {
     path: "/appartements/:id",
     element: <ProfilePage />,
+    errorElement: <ErrorBoundary />,
   },
   {
     path: "*",
     element: <FourHundredFourPage />,
+    errorElement: <ErrorBoundary />,
   },
-  // {
-  //   path: `/users/${data.id}`,
-  //   element: <ProfilePage />,
-  // },
 ]);
+
+function ErrorBoundary() {
+  let error = useRouteError();
+  console.error(error);
+  console.log(error);
+  // Uncaught ReferenceError: path is not defined
+  return console.error(error);
+}
+
+const Action = () => {
+  throw json({ message: "email is required" }, { status: 400 });
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

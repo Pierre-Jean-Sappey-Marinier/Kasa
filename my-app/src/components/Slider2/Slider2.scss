@@ -3,6 +3,9 @@
   position: relative;
   width: 100%;
   margin-top: 25px;
+  opacity: 1;
+  // transition-duration: 1s;
+  // transform: scale(1);
 
   .image-logement {
     flex-grow: 3;
@@ -23,7 +26,27 @@
     transform: rotate(0.5turn);
     cursor: pointer;
   }
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+    transition: all 1s ease-in-out;
+  }
   .slide-active {
     width: 100%;
+    opacity: 1;
+    transition: all 1s ease-in-out;
   }
+}
+
+.count {
+  position: relative;
+  left: 50%;
+  bottom: 40px;
+  font-variant-numeric: tabular-nums;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: white;
 }
