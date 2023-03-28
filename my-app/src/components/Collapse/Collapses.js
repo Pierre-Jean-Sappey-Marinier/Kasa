@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Collapse from "./Collapse";
 import data from "../../data/data.json";
 
-function CollaspseOnClick({ props }) {
+function Collapses({ props }) {
   return (
     <>
       {props.map((rule) => {
@@ -22,4 +22,4 @@ function CollaspseOnClick({ props }) {
   );
 }
 
-export default CollaspseOnClick;
+export default Collapses;

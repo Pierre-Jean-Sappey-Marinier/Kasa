@@ -13,15 +13,15 @@ function Slider() {
   ////////////////////
   let { id: paramId } = useParams();
 
-  const dataLocale = data.find(({ id }) => id === paramId);
-  const length = dataLocale.pictures.length;
+  const slides = data.find(({ id }) => id === paramId);
+  const length = slides.pictures.length;
 
   ///////////////
   useEffect(() => {
     const nextSlide = () => {
       setIndex((prevIndex) => (prevIndex === length - 1 ? 0 : prevIndex + 1));
     };
-    timeout.current = setTimeout(nextSlide, 3000);
+    timeout.current = setTimeout(nextSlide, 30000);
 
     return function () {
       if (timeout.current) {
@@ -37,7 +37,7 @@ function Slider() {
   const prevSlide = () => {
     setIndex(index === 0 ? length - 1 : index - 1);
   };
-  if (!Array.isArray(dataLocale.pictures) || length <= 0) {
+  if (!Array.isArray(slides.pictures) || length <= 0) {
     return null;
   }
 
@@ -46,7 +46,7 @@ function Slider() {
     <>
       <div className="slider">
         <img src={arrow} className="left-arrow" onClick={prevSlide} />
-        {dataLocale.pictures.map((urlImage, indexImage) => {
+        {slides.pictures.map((urlImage, indexImage) => {
           return (
             <div
               key={urlImage}
@@ -68,7 +68,6 @@ function Slider() {
       <div className="count">
         {index + 1}/{length}
       </div>
-      ;
     </>
   );
 }

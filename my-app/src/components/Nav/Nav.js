@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 function Nav() {
   return (
-    <nav>
+    <ul>
       <NavLink to="/home" className="accueil">
-        Accueil
+        <li> Accueil</li>
       </NavLink>
       <NavLink to="/apropos" className="apropos">
-        A propos
+        <li> A propos</li>
       </NavLink>
-    </nav>
+    </ul>
   );
 }
 

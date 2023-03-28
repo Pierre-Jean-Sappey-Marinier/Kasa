@@ -31,6 +31,11 @@ const StarRating = ({ rating }) => {
       </div>
     );
   }
+  function f(x, y, z) {}
+  var args = [0, 1, 2];
+  f(...args);
+  console.log("f", f);
+  console.log("args", args);
 
   return etoiles;
 };

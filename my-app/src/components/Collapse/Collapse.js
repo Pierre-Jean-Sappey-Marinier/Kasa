@@ -8,16 +8,15 @@ const Collapse = ({ id, description, title }) => {
 
   return (
     <>
-      <div key={id} className={`expander ${title}`}>
-        <div className="collapse_title expander-summary" onClick={toggle}>
+      <div key={id} className={`expander_${title}`}>
+        <div
+          className={`collapse_title expander-summary ${title}`}
+          onClick={toggle}
+        >
           {title}
         </div>
         <ul
-          className={
-            isOpen
-              ? `collapse_content content aria-expanded="true"`
-              : `collapse_content_hidden aria-expanded="false" `
-          }
+          className={isOpen ? `collapse_content` : `collapse_content_hidden  `}
         >
           {Array.isArray(description) ? (
             description.map((item) => {

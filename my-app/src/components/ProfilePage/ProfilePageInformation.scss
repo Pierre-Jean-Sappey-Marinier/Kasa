@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 0px;
   }
   .title {
     position: relative;
@@ -92,12 +92,22 @@
     justify-content: end;
     gap: 10px;
   }
-
+  .expander {
+    width: 582px;
+    margin-bottom: 100px;
+  }
+  .expander_description,
+  .expander_Equipements {
+    width: 582px;
+    margin-bottom: 50px;
+    max-height: auto;
+  }
   .collapse-description-equipment {
     display: block;
   }
   .description-equipment {
     display: flex;
+    align-items: flex-start;
 
     gap: 50px;
     justify-content: center;

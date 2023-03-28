@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom";
 import "./ProfilePageInformation.scss";
 import data from "../../data/data.json";
 import StarRating from "./StarRating";
-// import CollaspseOnClick from "../Collapse/CollapseOnClick";
-import Collaspse from "../Collapse/Collapse";
+// import CollapseOnClick from "../Collapse/CollapseOnClick";
+import Collapse from "../Collapse/Collapse";
+import Collapses from "../Collapse/Collapses";
 const ProfilePageInformations = () => {
   let { id: paramId } = useParams();
 
   const dataLocale = data.find(({ id }) => id === paramId);
+
   // const dataLocale = data.find(({ id: itemId }) => itemId === id);
   // const dataLocale = data.find((item) => item.id === id);
   const length = dataLocale.pictures.length;
@@ -53,12 +55,12 @@ const ProfilePageInformations = () => {
 
       <div className="collapse-description-equipment">
         <div className="description-equipment">
-          <Collaspse
+          <Collapse
             className="collaspe_description"
-            title="Description"
+            title="description"
             description={dataLocale.description}
           />
-          <Collaspse
+          <Collapse
             className="collaspe_equipment"
             title="Equipements"
             description={dataLocale.equipments}

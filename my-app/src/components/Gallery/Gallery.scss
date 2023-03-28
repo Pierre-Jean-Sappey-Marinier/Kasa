@@ -43,15 +43,31 @@ a {
   border-radius: 25px;
   filter: drop-shadow(8px 8px 10px gray);
 
-  &:hover {
-    filter: grayscale(80%);
-    filter: brightness(40%);
-  }
+  // &:hover {
+  //   filter: grayscale(80%);
+  //   filter: brightness(40%);
+  // }
 }
-
+.img_gallery:after {
+  position: absolute;
+  border-radius: 25px;
+  width: 83%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 37;
+  opacity: 1;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
 h2 {
   position: absolute;
+  z-index: 1;
   width: 74%;
+  padding-left: 10px;
   margin: 250px 50px 0px 20px;
   color: $white;
   font-family: "Montserrat";
@@ -60,8 +76,8 @@ h2 {
   font-size: 18px;
   line-height: 142.6%;
 
-  &:hover {
-    filter: grayscale(80%);
-    filter: brightness(40%);
-  }
+  // &:hover {
+  //   filter: grayscale(80%);
+  //   filter: brightness(40%);
+  // }
 }

@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Banner from "../Banner/Banner";
 import Footer from "../Footer/Footer";
 import background_apropos from "../../assets/background_apropos.png";
-import CollaspseOnClick from "../Collapse/CollapseOnClick";
+import Collapses from "../Collapse/Collapses";
 import aproposData from "../../data/aproposData.json";
 
 const AProposPage = () => {
@@ -11,7 +11,8 @@ const AProposPage = () => {
     <div className="AProposPage">
       <Header />
       <Banner image={background_apropos} isText={false} />
-      <CollaspseOnClick props={aproposData} />
+      <Collapses props={aproposData} />
+
       <Footer />
     </div>
   );
