@@ -1,12 +1,12 @@
 //create a slider  with smooth transitions on react
 import React, { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./Slider2.scss";
+import "./Caroussel.scss";
 import data from "../../data/data.json";
 import arrow from "../../assets/arrow.png";
 // import "./Caroussel.scss";
 
-function Slider() {
+function Caroussel() {
   ////////////////
   const [index, setIndex] = useState(0);
   const timeout = useRef(null);
@@ -72,4 +72,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default Caroussel;

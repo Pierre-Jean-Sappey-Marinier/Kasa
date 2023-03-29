@@ -2,8 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Carousel from "./Caroussel";
-import ProfilePageInformation from "./ProfilePageInformations";
+import ProfilePageInformation from "../ProfilePage/ProfilePageInformations";
+import Caroussel from "../Caroussel/Caroussel";
 const ProfilePage = () => {
   // console.log(useParams());
   let { id } = useParams();
@@ -12,7 +12,7 @@ const ProfilePage = () => {
   return (
     <>
       <Header />
-      <Carousel />
+      <Caroussel />
       <ProfilePageInformation />
       <Footer />
     </>

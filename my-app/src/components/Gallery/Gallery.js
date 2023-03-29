@@ -25,6 +25,7 @@ const Gallery = () => {
           </React.Fragment>
         );
       })}
+      {console.log("🚀 ~ file: Gallery.js:28 ~ {data.map ~ data:", data)}{" "}
     </div>
   );
 };

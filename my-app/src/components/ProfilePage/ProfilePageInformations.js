@@ -6,6 +6,7 @@ import StarRating from "./StarRating";
 // import CollapseOnClick from "../Collapse/CollapseOnClick";
 import Collapse from "../Collapse/Collapse";
 import Collapses from "../Collapse/Collapses";
+import Caroussel from "../Caroussel/Caroussel";
 const ProfilePageInformations = () => {
   let { id: paramId } = useParams();
 

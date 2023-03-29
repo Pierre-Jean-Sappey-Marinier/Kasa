@@ -8,7 +8,7 @@ import Home from "./components/Pages/HomesPage";
 import Footer from "./components/Footer/Footer";
 import AProposPage from "./components/Pages/AProposPage";
 import FourHundredFourPage from "./components/Pages/FourHundredFourPagePage";
-import ProfilePage from "./components/ProfilePage/ProfilePage";
+import ProfilePage from "./components/Pages/ProfilePage";
 
 import {
   createBrowserRouter,
