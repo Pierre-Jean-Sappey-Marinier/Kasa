@@ -1,5 +1,5 @@
 @import "../../styles/App.scss";
-ul {
+.navigation {
   list-style-type: none;
 
   .apropos {
@@ -18,6 +18,10 @@ ul {
     .apropos:hover {
       text-decoration: underline;
     }
+  }
+  a {
+    width: auto;
+    margin-top: auto;
   }
 
   .accueil {

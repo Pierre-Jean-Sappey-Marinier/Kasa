@@ -7,7 +7,7 @@ import data from "../../data/data.json";
 
 function Collapses({ props }) {
   return (
-    <>
+    <ul className="Collapses">
       {props.map((rule) => {
         return (
           <Collapse
@@ -18,7 +18,7 @@ function Collapses({ props }) {
           />
         );
       })}
-    </>
+    </ul>
   );
 }
 

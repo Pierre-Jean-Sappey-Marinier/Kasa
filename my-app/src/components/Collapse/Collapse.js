@@ -8,25 +8,27 @@ const Collapse = ({ id, description, title }) => {
 
   return (
     <>
-      <div key={id} className={`expander_${title}`}>
+      <li key={id} className={`expander_${title}`}>
         <div
           className={`collapse_title expander-summary ${title}`}
           onClick={toggle}
         >
           {title}
         </div>
-        <ul
+        <div
           className={isOpen ? `collapse_content` : `collapse_content_hidden  `}
         >
           {Array.isArray(description) ? (
-            description.map((item) => {
-              return <li key={`${item}${id}`}>{item}</li>;
-            })
+            <ul>
+              {description.map((item) => {
+                return <li key={`${item}${id}`}>{item}</li>;
+              })}
+            </ul>
           ) : (
             <p>{description}</p>
           )}
-        </ul>
-      </div>
+        </div>
+      </li>
     </>
   );
 };

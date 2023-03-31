@@ -44,11 +44,11 @@ function Caroussel() {
   ///////////////
   return (
     <>
-      <div className="slider">
+      <ul className="slider">
         <img src={arrow} className="left-arrow" onClick={prevSlide} />
         {slides.pictures.map((urlImage, indexImage) => {
           return (
-            <div
+            <li
               key={urlImage}
               className={indexImage === index ? "slide-active" : "slide"}
             >
@@ -60,11 +60,11 @@ function Caroussel() {
                   index={index}
                 />
               )}
-            </div>
+            </li>
           );
         })}
         <img src={arrow} className="right-arrow" onClick={nextSlide} />
-      </div>
+      </ul>
       <div className="count">
         {index + 1}/{length}
       </div>
