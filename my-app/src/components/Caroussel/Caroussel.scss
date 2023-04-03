@@ -48,6 +48,9 @@
     opacity: 1;
     transition: all 1s ease-in-out;
   }
+  li {
+    list-style-type: none;
+  }
   .slide-active:after {
     position: absolute;
     width: 100%;

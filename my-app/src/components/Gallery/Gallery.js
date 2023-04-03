@@ -10,14 +10,9 @@ const Gallery = () => {
       {data.map((data) => {
         return (
           <React.Fragment key={data.id}>
-            <Link
-              key={data.id}
-              to={`/appartements/${data.id}`}
-              className="linkToCard"
-            >
+            <Link to={`/appartements/${data.id}`} className="linkToCard">
               <Card
-                key={data.id}
-                id={data.id}
+                // id={data.id}
                 cover={data.cover}
                 title={data.title}
               />

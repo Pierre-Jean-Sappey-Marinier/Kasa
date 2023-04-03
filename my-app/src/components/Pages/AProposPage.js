@@ -6,6 +6,7 @@ import background_apropos from "../../assets/background_apropos.png";
 import Collapses from "../Collapse/Collapses";
 import aproposData from "../../data/aproposData.json";
 import "./AProposPage.scss";
+
 const AProposPage = () => {
   return (
     <div className="AProposPage">
