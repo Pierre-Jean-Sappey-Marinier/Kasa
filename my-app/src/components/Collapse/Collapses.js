@@ -1,9 +1,7 @@
 import "./Collapse.scss";
 import aproposData from "../../data/aproposData.json";
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
 import Collapse from "./Collapse";
-import data from "../../data/data.json";
 
 function Collapses({ props }) {
   return (

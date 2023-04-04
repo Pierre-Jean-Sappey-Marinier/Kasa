@@ -3,7 +3,7 @@
   z-index: 0;
   position: relative;
   display: grid;
-  /* offset: body; */
+  // offset: body;
   grid-template-columns: repeat(3, 6fr);
   /* gap: 2% 2%; */
   width: 100%;
@@ -13,7 +13,8 @@
   // padding: 50px;
   padding-left: 80px;
   border-radius: 25px;
-  margin-top: 43px;
+  margin-top: 56px;
+  padding-top: 56px;
 
   @media screen and (max-width: 767px) {
     display: flex;
@@ -26,7 +27,6 @@
     // object-fit: cover;
     width: 360px;
     // padding-top: 40px;
-    margin-top: 40px;
   }
 }
 
@@ -36,8 +36,11 @@
   justify-content: center;
   align-items: center;
 }
-
+.linkToCard {
+  padding-bottom: 50px;
+}
 .image {
+  // padding-bottom: 40px;
   position: relative;
   object-fit: cover;
   display: flex;

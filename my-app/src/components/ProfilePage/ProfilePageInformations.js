@@ -5,42 +5,37 @@ import data from "../../data/data.json";
 import StarRating from "./StarRating";
 // import CollapseOnClick from "../Collapse/CollapseOnClick";
 import Collapse from "../Collapse/Collapse";
-import Collapses from "../Collapse/Collapses";
-import Caroussel from "../Caroussel/Caroussel";
-const ProfilePageInformations = () => {
-  let { id: paramId } = useParams();
 
-  const dataLocale = data.find(({ id }) => id === paramId);
+const ProfilePageInformations = ({ idLocale }) => {
+  const dataOfOneLocation = data.find(({ id }) => id === idLocale);
 
-  // const dataLocale = data.find(({ id: itemId }) => itemId === id);
-  // const dataLocale = data.find((item) => item.id === id);
-  const length = dataLocale.pictures.length;
+  const length = dataOfOneLocation.pictures.length;
 
-  if (Array.isArray(dataLocale.equipments)) {
+  if (Array.isArray(dataOfOneLocation.equipments)) {
   }
   console.log();
   return (
     <section className="infos">
       <div className="title-location-tags">
         <div className="title-picture">
-          <div className="title"> {dataLocale.title} </div>
+          <div className="title"> {dataOfOneLocation.title} </div>
           <div className="name-and-picture">
             <div className="identité">
-              <div className="name"> {dataLocale.host.name} </div>
+              <div className="name"> {dataOfOneLocation.host.name} </div>
               <picture className="picture_content">
                 <img
                   className="picture"
-                  src={dataLocale.host.picture}
+                  src={dataOfOneLocation.host.picture}
                   alt="Logo"
                 />
               </picture>
             </div>
           </div>
         </div>
-        <div className="location">{dataLocale.location}</div>
+        <div className="location">{dataOfOneLocation.location}</div>
         <div className="tags-star">
           <div className="tags">
-            {dataLocale.tags.map((tag, i) => {
+            {dataOfOneLocation.tags.map((tag, i) => {
               return (
                 <p key={i} className="tag">
                   {tag}
@@ -49,22 +44,22 @@ const ProfilePageInformations = () => {
             })}
           </div>
           <div className="stars">
-            <StarRating className="star" rating={dataLocale.rating} />
+            <StarRating className="star" rating={dataOfOneLocation.rating} />
           </div>
         </div>
       </div>
 
       <div className="collapse-description-equipment">
-        <div className="description-equipment">
+        <div className="collapses_informations_page">
           <Collapse
             className="collaspe_description"
-            title="description"
-            description={dataLocale.description}
+            title="Description"
+            description={dataOfOneLocation.description}
           />
           <Collapse
             className="collaspe_equipment"
             title="Equipements"
-            description={dataLocale.equipments}
+            description={dataOfOneLocation.equipments}
           />
         </div>
       </div>

@@ -24,35 +24,41 @@ import {
   rootLoader,
   useRouteError,
 } from "react-router-dom";
+import RootLayout from "./components/Layout/RootLayout";
 
 const router = createBrowserRouter([
   {
-    path: "/my-app",
-    element: <Home />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
-  },
-  //
-  {
-    path: "/banner",
-    element: <Banner />,
-  },
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/my-app",
+        element: <Home />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
+      },
 
-  {
-    path: "/apropos",
-    element: <AProposPage />,
-  },
-  {
-    path: "/appartements/:id",
-    element: <ProfilePage />,
-    errorElement: <FourHundredFourPage />,
-  },
+      {
+        path: "/banner",
+        element: <Banner />,
+      },
 
-  {
-    path: "*",
-    element: <FourHundredFourPage />,
+      {
+        path: "/apropos",
+        element: <AProposPage />,
+      },
+      {
+        path: "/appartements/:id",
+        element: <ProfilePage />,
+        errorElement: <FourHundredFourPage />,
+      },
+
+      {
+        path: "*",
+        element: <FourHundredFourPage />,
+      },
+    ],
   },
 ]);
 

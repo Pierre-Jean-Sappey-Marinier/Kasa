@@ -87,35 +87,27 @@
     gap: 10px;
   }
   .expander {
-    width: 582px;
+    width: 50%;
     margin-bottom: 100px;
-  }
-  .expander_description,
-  .expander_Equipements {
-    width: 582px;
-    margin-bottom: 50px;
     max-height: auto;
   }
-  .collapse-description-equipment {
-    display: block;
-  }
-  .description-equipment {
+
+  // .collapse-description-equipment {
+  //   display: block;
+  // }
+  .collapses_informations_page {
     display: flex;
     align-items: flex-start;
 
     gap: 50px;
     justify-content: center;
 
-    .collaspe_description {
-      width: 400px;
-      height: 100%;
-    }
     .collapse_title {
-      width: 582px;
+      width: 100%;
     }
 
     .collapse_content {
-      width: 582px;
+      width: 100%;
 
       font-weight: 400;
       font-size: 18px;

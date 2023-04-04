@@ -1,19 +1,18 @@
 //create a slider  with smooth transitions on react
 import React, { useState, useRef, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import "./Caroussel.scss";
 import data from "../../data/data.json";
 import arrow from "../../assets/arrow.png";
 // import "./Caroussel.scss";
 
-function Caroussel() {
+function Caroussel({ idLocale }) {
   ////////////////
   const [index, setIndex] = useState(0);
   const timeout = useRef(null);
-  ////////////////////
-  let { id: paramId } = useParams();
 
-  const slides = data.find(({ id }) => id === paramId);
+  const slides = data.find(({ id }) => {
+    return id === idLocale;
+  });
   const length = slides.pictures.length;
 
   ///////////////

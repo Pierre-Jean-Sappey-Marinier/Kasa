@@ -1,45 +1,33 @@
 .slider {
-  /* other styles (left, top, right, and padding) */
-
   display: flex;
   position: relative;
   width: 100%;
   margin-top: 25px;
   height: 100%;
 
-  // img:after {
-  //   -webkit-filter: grayscale(100%) contrast(0.9);
-  // }
-  // img:before {
-  //   -webkit-filter: grayscale(100%) contrast(0.9);
-  // }
-
-  img {
-    // -webkit-filter: grayscale(100%) contrast(0.9);
-    // -moz-filter: grayscale(100%) contrast(0.9);
-    // filter: grayscale(100%) contrast(0.9);
-  }
   .image-logement {
     flex-grow: 3;
     height: 400px;
     width: 100%;
     object-fit: cover;
+    border-radius: 25px;
   }
   .left-arrow {
     position: absolute;
     top: 160px;
+    left: 25px;
     cursor: pointer;
     z-index: 2;
   }
   .right-arrow {
     position: absolute;
-    right: 0;
+    right: 25px;
     top: 160px;
     transform: rotate(0.5turn);
     cursor: pointer;
   }
   .slide {
-    opacity: 0;
+    opacity: 0.5;
     transition-duration: 1s ease;
     transition: all 1s ease-in-out;
   }
@@ -54,15 +42,17 @@
   .slide-active:after {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 99%;
     content: "";
     top: 0;
     left: 0;
     opacity: 1;
     transition: all 1s ease-in-out;
+    border-radius: 25px;
+
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.7889356426164216) 0%,
+      rgba(0, 0, 0, 0.3889356426164216) 0%,
       rgba(0, 0, 0, 0) 100%
     );
   }
