@@ -78,7 +78,7 @@
   }
   .picture {
     border-radius: 100px;
-    width: 64px;
+    width: 50%;
   }
 
   .stars {
@@ -112,6 +112,42 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 142.6%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .name {
+      font-size: 18px;
+    }
+    .picture {
+      width: 100%;
+    }
+    .stars {
+      align-items: center;
+      gap: 10px;
+    }
+
+    .gold-star {
+      height: 20px;
+    }
+    .expander {
+      width: 100%;
+      margin-bottom: 0px;
+      max-height: auto;
+      margin-top: 0px;
+    }
+    .collapses_informations_page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // gap: 50px;
+      justify-content: center;
+    }
+    .collapse_title {
+      width: 100%;
+    }
+    .collapse_content {
+      width: 100%;
+      font-size: 14px;
     }
   }
 }

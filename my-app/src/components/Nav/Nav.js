@@ -6,12 +6,16 @@ import "./Nav.scss";
 function Nav() {
   return (
     <ul className="navigation">
-      <NavLink to="/home" className="accueil">
-        <li> Accueil</li>
-      </NavLink>
-      <NavLink to="/apropos" className="apropos">
-        <li> A propos</li>
-      </NavLink>
+      <li>
+        <NavLink to="/home" className="accueil">
+          <p> Accueil</p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/apropos" className="apropos">
+          <p> A propos</p>
+        </NavLink>
+      </li>
     </ul>
   );
 }

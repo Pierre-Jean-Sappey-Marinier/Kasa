@@ -5,14 +5,11 @@ import data from "../../data/data.json";
 import arrow from "../../assets/arrow.png";
 // import "./Caroussel.scss";
 
-function Caroussel({ idLocale }) {
+function Caroussel({ slides }) {
   ////////////////
   const [index, setIndex] = useState(0);
   const timeout = useRef(null);
 
-  const slides = data.find(({ id }) => {
-    return id === idLocale;
-  });
   const length = slides.pictures.length;
 
   ///////////////

@@ -35,13 +35,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/home",
+        path: "/",
         element: <Home />,
       },
-
       {
-        path: "/banner",
-        element: <Banner />,
+        path: "/home",
+        element: <Home />,
       },
 
       {
@@ -51,6 +50,19 @@ const router = createBrowserRouter([
       {
         path: "/appartements/:id",
         element: <ProfilePage />,
+        loader: async ({ params, request }) => {
+          const str = params.id.length;
+
+          const found = data.find((element) => {
+            return element.id === params.id;
+          });
+
+          if (found === undefined) {
+            throw new Response("Not Found", { status: 404 });
+          }
+
+          return found;
+        },
         errorElement: <FourHundredFourPage />,
       },
 

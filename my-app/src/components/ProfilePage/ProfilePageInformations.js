@@ -6,13 +6,10 @@ import StarRating from "./StarRating";
 // import CollapseOnClick from "../Collapse/CollapseOnClick";
 import Collapse from "../Collapse/Collapse";
 
-const ProfilePageInformations = ({ idLocale }) => {
-  const dataOfOneLocation = data.find(({ id }) => id === idLocale);
-
-  const length = dataOfOneLocation.pictures.length;
-
+const ProfilePageInformations = ({ dataOfOneLocation }) => {
   if (Array.isArray(dataOfOneLocation.equipments)) {
   }
+
   console.log();
   return (
     <section className="infos">

@@ -4,9 +4,7 @@
 
   .apropos {
     position: relative;
-
     justify-content: flex-end;
-
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
@@ -42,14 +40,16 @@
 
   @media screen and (max-width: 767px) {
     .accueil {
+      text-transform: uppercase;
       margin-right: 0px;
       font-size: 18px;
-      padding-right: 20px;
-      width: 50%;
+      padding-right: 10px;
+      // width: 50%;
     }
     .apropos {
+      text-transform: uppercase;
       font-size: 18px;
-      margin-right: 20px;
+      // margin-right: 20px;
       white-space: nowrap;
       height: 40px;
     }

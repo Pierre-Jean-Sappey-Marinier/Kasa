@@ -1,4 +1,23 @@
-.Collapses {
-  display: flex;
-  flex-direction: column;
+.AProposPage {
+  .banner {
+    margin-bottom: 30px;
+  }
+  .expander {
+    width: 80%;
+    // margin-bottom: 100px;
+    // max-height: auto;
+  }
+  .Collapses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: 75%;
+  }
+
+  @media screen and (max-width: 767px) {
+    .expander {
+      width: 100%;
+    }
+  }
 }

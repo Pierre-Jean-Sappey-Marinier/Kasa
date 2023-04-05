@@ -48,4 +48,15 @@
     width: auto;
     margin-top: auto;
   }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 144px;
+    }
+    p {
+      font-size: 24px;
+    }
+    .home {
+      font-size: 14px;
+    }
+  }
 }
