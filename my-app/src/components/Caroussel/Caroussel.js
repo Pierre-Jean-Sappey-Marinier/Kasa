@@ -10,7 +10,7 @@ function Caroussel({ slides }) {
   const [index, setIndex] = useState(0);
   const timeout = useRef(null);
 
-  const length = slides.pictures.length;
+  const length = slides.length;
 
   ///////////////
   useEffect(() => {
@@ -33,16 +33,16 @@ function Caroussel({ slides }) {
   const prevSlide = () => {
     setIndex(index === 0 ? length - 1 : index - 1);
   };
-  if (!Array.isArray(slides.pictures) || length <= 0) {
+  if (!Array.isArray(slides) || length <= 0) {
     return null;
   }
 
   ///////////////
   return (
-    <>
+    <div className="caroussel">
+      <img src={arrow} className="left-arrow" onClick={prevSlide} />
       <ul className="slider">
-        <img src={arrow} className="left-arrow" onClick={prevSlide} />
-        {slides.pictures.map((urlImage, indexImage) => {
+        {slides.map((urlImage, indexImage) => {
           return (
             <li
               key={urlImage}
@@ -59,12 +59,12 @@ function Caroussel({ slides }) {
             </li>
           );
         })}
-        <img src={arrow} className="right-arrow" onClick={nextSlide} />
       </ul>
+      <img src={arrow} className="right-arrow" onClick={nextSlide} />
       <div className="count">
         {index + 1}/{length}
       </div>
-    </>
+    </div>
   );
 }
 

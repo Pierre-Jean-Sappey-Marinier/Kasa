@@ -3,7 +3,7 @@ import star from "../../assets/star.svg";
 import stargrey from "../../assets/stargrey.svg";
 
 const StarRating = ({ rating }) => {
-  const laforet = [...Array(parseInt(5)).keys()];
+  const laforet = [...Array(parseInt(5, 10)).keys()];
 
   return (
     <>

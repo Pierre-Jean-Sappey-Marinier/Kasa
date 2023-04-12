@@ -12,7 +12,7 @@ const Collapse = ({ id, description, title }) => {
       <li key={id} className={`expander`}>
         <button className={` expander_title`} onClick={toggle}>
           {title}
-          <img src={arrow} className={isOpen ? `arrow_up` : `arrow_down  `} />
+          <img src={arrow} className={"arrow " + (isOpen ? `up` : `down  `)} />
         </button>
         <div
           className={isOpen ? `collapse_content` : `collapse_content_hidden  `}

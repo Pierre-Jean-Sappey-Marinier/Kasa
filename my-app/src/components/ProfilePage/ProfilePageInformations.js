@@ -11,50 +11,54 @@ const ProfilePageInformations = ({ dataOfOneLocation }) => {
   }
 
   console.log();
+
   return (
     <section className="infos">
-      <div className="title-location-tags">
-        <div className="title-picture">
-          <div className="title"> {dataOfOneLocation.title} </div>
-          <div className="name-and-picture">
-            <div className="identité">
-              <div className="name"> {dataOfOneLocation.host.name} </div>
-              <picture className="picture_content">
-                <img
-                  className="picture"
-                  src={dataOfOneLocation.host.picture}
-                  alt="Logo"
-                />
-              </picture>
+      <div className="locationAndPictureAndStar">
+        <div className="title-location-tags">
+          <div className="title-picture">
+            <div className="title"> {dataOfOneLocation.title} </div>
+          </div>
+          <div className="location">{dataOfOneLocation.location}</div>
+
+          <div className="tags-star">
+            <div className="tags">
+              {dataOfOneLocation.tags.map((tag, i) => {
+                return (
+                  <p key={i} className="tag">
+                    {tag}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </div>
-        <div className="location">{dataOfOneLocation.location}</div>
-        <div className="tags-star">
-          <div className="tags">
-            {dataOfOneLocation.tags.map((tag, i) => {
-              return (
-                <p key={i} className="tag">
-                  {tag}
-                </p>
-              );
-            })}
+        <div className="identityAndStar">
+          <div className="identité">
+            <div className="name"> {dataOfOneLocation.host.name} </div>
+            <picture className="picture_content">
+              <img
+                className="picture"
+                src={dataOfOneLocation.host.picture}
+                alt="Logo"
+              />
+            </picture>
           </div>
           <div className="stars">
             <StarRating className="star" rating={dataOfOneLocation.rating} />
           </div>
         </div>
       </div>
-
       <div className="collapse-description-equipment">
         <div className="collapses_informations_page">
           <Collapse
-            className="collaspe_description"
+            className="collapse_description"
             title="Description"
             description={dataOfOneLocation.description}
           />
+
           <Collapse
-            className="collaspe_equipment"
+            className="collapse_equipment"
             title="Equipements"
             description={dataOfOneLocation.equipments}
           />

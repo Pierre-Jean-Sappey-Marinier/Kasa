@@ -1,6 +1,15 @@
 @import "../../styles/App.scss";
 
 .infos {
+  .locationAndPictureAndStar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .identityAndStar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   .title-location-tags {
     position: relative;
     // display: flex;
@@ -42,27 +51,22 @@
     padding-top: 20px;
     // margin-bottom: 40px;
   }
-  .tags-star {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 15px;
-  }
+
   .tag {
     position: relative;
     border-radius: 10px;
     background-color: $saumon;
     padding: 3px 40px 3px 40px;
   }
-  .name-and-picture {
+  .identityAndStar {
     display: flex;
 
     justify-content: right;
-    align-items: center;
+    // align-items: center;
   }
   .identité {
     display: flex;
+    justify-content: center;
 
     font-weight: 500;
     font-size: 18px;
@@ -78,7 +82,10 @@
   }
   .picture {
     border-radius: 100px;
-    width: 50%;
+    width: 100%;
+  }
+  .picture_content {
+    width: 64px;
   }
 
   .stars {
@@ -114,6 +121,11 @@
       line-height: 142.6%;
     }
   }
+  @media screen and (max-width: 800px) {
+    .locationAndPictureAndStar {
+      flex-direction: column;
+    }
+  }
   @media screen and (max-width: 767px) {
     .name {
       font-size: 18px;
@@ -122,9 +134,16 @@
       width: 100%;
     }
     .stars {
-      align-items: center;
       gap: 10px;
+      justify-content: start;
     }
+    // .tags-star {
+    //   display: flex;
+    //   flex-direction: column;
+    //   width: 100%;
+    //   margin-bottom: 15px;
+    //   align-items: start;
+    // }
 
     .gold-star {
       height: 20px;

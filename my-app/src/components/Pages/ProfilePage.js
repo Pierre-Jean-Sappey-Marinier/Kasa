@@ -4,18 +4,20 @@ import ProfilePageInformation from "../ProfilePage/ProfilePageInformations";
 import Caroussel from "../Caroussel/Caroussel";
 import data from "../../data/data.json";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ProfilePage = () => {
-  const loaderData = useLoaderData();
-  console.log(
-    "🚀 ~ file: ProfilePage.js:12 ~ ProfilePage ~ loaderData:",
-    loaderData
-  );
+  const appartementData = useLoaderData();
 
   return (
     <>
-      <Caroussel slides={loaderData} />
-      <ProfilePageInformation dataOfOneLocation={loaderData} />
+      <Helmet>
+        <title>{appartementData.title}</title>
+        <meta name="description" content={appartementData.description} />
+        <meta name="keywords" content={appartementData.title} />
+      </Helmet>
+      <Caroussel slides={appartementData.pictures} />
+      <ProfilePageInformation dataOfOneLocation={appartementData} />
     </>
   );
 };

@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 import AProposPage from "./components/Pages/AProposPage";
 import FourHundredFourPage from "./components/Pages/FourHundredFourPagePage";
 import ProfilePage from "./components/Pages/ProfilePage";
-
+import { Helmet } from "react-helmet";
 import {
   createBrowserRouter,
   Route,
@@ -30,10 +30,10 @@ const router = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
-      {
-        path: "/my-app",
-        element: <Home />,
-      },
+      // {
+      //   path: "/my-app",
+      //   element: <Home />,
+      // },
       {
         path: "/",
         element: <Home />,
@@ -51,17 +51,17 @@ const router = createBrowserRouter([
         path: "/appartements/:id",
         element: <ProfilePage />,
         loader: async ({ params, request }) => {
-          const str = params.id.length;
+          // const str = params.id.length;
 
-          const found = data.find((element) => {
+          const appartementData = data.find((element) => {
             return element.id === params.id;
           });
 
-          if (found === undefined) {
+          if (appartementData === undefined) {
             throw new Response("Not Found", { status: 404 });
           }
 
-          return found;
+          return appartementData;
         },
         errorElement: <FourHundredFourPage />,
       },
