@@ -23,7 +23,7 @@ body {
   font-weight: 400;
   //position: relative;
   max-width: 1400px;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   padding-left: 10px;
   padding-right: 10px;
@@ -31,7 +31,9 @@ body {
   // background-color: rgba(255, 255, 255, 0.636);
   // background-color: rgba(16, 16, 16, 0.636);
 }
-
+main {
+  height: 100%;
+}
 $saumon: #ff6060;
 $white: white;
 $grey: #f7f7f7;

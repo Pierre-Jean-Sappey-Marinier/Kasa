@@ -15,7 +15,8 @@ const Collapse = ({ id, description, title }) => {
           <img src={arrow} className={"arrow " + (isOpen ? `up` : `down  `)} />
         </button>
         <div
-          className={isOpen ? `collapse_content` : `collapse_content_hidden  `}
+          className={"collapse_content " + (isOpen ? `` : `hidden`)}
+          // className={isOpen ? `collapse_content` : `collapse_content_hidden  `}
         >
           {Array.isArray(description) ? (
             <ul>

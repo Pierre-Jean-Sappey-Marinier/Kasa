@@ -12,7 +12,6 @@ const AProposPage = () => {
       <Helmet>
         <title>A propos</title>
         <meta name="description" content="A propos de nous, nos valeurs." />
-        <meta name="keywords" content="Fiabilité, respect, service, sécurité" />
       </Helmet>
       <Banner image={background_apropos} isText={false} />
       <Collapses props={aproposData} />

@@ -46,7 +46,10 @@ function Caroussel({ slides }) {
           return (
             <li
               key={urlImage}
-              className={indexImage === index ? "slide-active" : "slide"}
+              className={
+                "slide" + (indexImage === index ? "-active" : " hidden")
+              }
+              // className={indexImage === index ? "slide-active" : "slide"}
             >
               {indexImage === index && (
                 <img
