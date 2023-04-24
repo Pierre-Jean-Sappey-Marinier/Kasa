@@ -1,8 +1,8 @@
 //create a slider  with smooth transitions on react
-import React, { useState, useRef, useEffect } from "react";
-import "./Caroussel.scss";
-import data from "../../data/data.json";
-import arrow from "../../assets/arrow.png";
+import React, { useState, useRef, useEffect } from 'react';
+import './Caroussel.scss';
+import data from '../../data/data.json';
+import arrow from '../../assets/arrow.png';
 // import "./Caroussel.scss";
 
 function Caroussel({ slides }) {
@@ -39,23 +39,23 @@ function Caroussel({ slides }) {
 
   ///////////////
   return (
-    <div className="caroussel">
-      <img src={arrow} className="left-arrow" onClick={prevSlide} />
-      <ul className="slider">
+    <div className='caroussel'>
+      <img src={arrow} className='left-arrow' onClick={prevSlide} />
+      <ul className='slider'>
         {slides.map((urlImage, indexImage) => {
           return (
             <li
               key={urlImage}
               className={
-                "slide" + (indexImage === index ? "-active" : " hidden")
+                'slide' + (indexImage === index ? '-active' : ' hidden')
               }
               // className={indexImage === index ? "slide-active" : "slide"}
             >
               {indexImage === index && (
                 <img
                   src={urlImage}
-                  alt=""
-                  className="image-logement"
+                  alt=''
+                  className='image-logement'
                   index={index}
                 />
               )}
@@ -63,8 +63,8 @@ function Caroussel({ slides }) {
           );
         })}
       </ul>
-      <img src={arrow} className="right-arrow" onClick={nextSlide} />
-      <div className="count">
+      <img src={arrow} className='right-arrow' onClick={nextSlide} />
+      <div className='count'>
         {index + 1}/{length}
       </div>
     </div>

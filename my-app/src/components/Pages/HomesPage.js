@@ -1,11 +1,11 @@
-import Banner from "../Banner/Banner";
-import Gallery from "../Gallery/Gallery";
-import background from "../../assets/background.png";
-import { Helmet } from "react-helmet";
+import Banner from '../components/Banner/Banner';
+import Gallery from '../components/Gallery/Gallery';
+import background from '../assets/background.png';
+import { Helmet } from 'react-helmet';
 
 function Home() {
   return (
-    <div className="Home">
+    <div className='Home'>
       <Helmet>
         <title>HOMEPAGE</title>
       </Helmet>

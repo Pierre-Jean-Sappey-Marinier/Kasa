@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import NotFound from "../NotFound/NotFound";
+import NotFound from '../components/NotFound/NotFound';
 
 const FourHundredFourPage = () => {
   return (

@@ -1,32 +1,32 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./styles/index.scss";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './styles/index.scss';
 
-import data from "./data/data.json";
+import data from './data/data.json';
 
-import Home from "./components/Pages/HomesPage";
-import AProposPage from "./components/Pages/AProposPage";
-import FourHundredFourPage from "./components/Pages/FourHundredFourPagePage";
-import ProfilePage from "./components/Pages/ProfilePage";
+import Home from './Pages/HomesPage';
+import AProposPage from './Pages/AProposPage';
+import FourHundredFourPage from './Pages/FourHundredFourPagePage';
+import ProfilePage from './Pages/ProfilePage';
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./components/Layout/RootLayout";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RootLayout from './components/Layout/RootLayout';
 
 const router = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
       {
-        path: "/home",
+        path: '/home',
         element: <Home />,
       },
 
       {
-        path: "/apropos",
+        path: '/apropos',
         element: <AProposPage />,
       },
       {
-        path: "/appartements/:id",
+        path: '/appartements/:id',
         element: <ProfilePage />,
         loader: async ({ params }) => {
           const appartementData = data.find((element) => {
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
           });
 
           if (appartementData === undefined) {
-            throw new Response("Not Found", { status: 404 });
+            throw new Response('Not Found', { status: 404 });
           }
 
           return appartementData;
@@ -43,14 +43,14 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "*",
+        path: '*',
         element: <FourHundredFourPage />,
       },
     ],
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
