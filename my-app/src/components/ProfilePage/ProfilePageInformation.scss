@@ -1,4 +1,4 @@
-@import "../../styles/App.scss";
+@import '../../styles/App.scss';
 
 .infos {
   .locationAndPictureAndStar {
@@ -121,22 +121,54 @@
       line-height: 142.6%;
     }
   }
+
+  @media screen and (max-width: 900px) {
+    .tags-star {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 15px;
+      align-items: start;
+    }
+    .tags {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      gap: 10px;
+      // width: 100%;
+    }
+  }
   @media screen and (max-width: 800px) {
     .locationAndPictureAndStar {
       flex-direction: column;
+    }
+    .identityAndStar {
+      flex-direction: row-reverse;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .stars {
+      align-items: center;
     }
   }
   @media screen and (max-width: 767px) {
     .name {
       font-size: 18px;
     }
+    img {
+      height: 100%;
+    }
+    .identityAndStar {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     .picture {
-      width: 100%;
+      // width: 100%;
     }
-    .stars {
-      gap: 10px;
-      justify-content: start;
-    }
+    // .stars {
+    //   gap: 10px;
+    //   justify-content: start;
+    // }
     // .tags-star {
     //   display: flex;
     //   flex-direction: column;
