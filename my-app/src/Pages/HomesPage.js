@@ -1,17 +1,19 @@
 import Banner from '../components/Banner/Banner';
 import Gallery from '../components/Gallery/Gallery';
 import background from '../assets/background.png';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function Home() {
   return (
-    <div className='Home'>
-      <Helmet>
-        <title>HOMEPAGE</title>
-      </Helmet>
-      <Banner image={background} isText={true} />
-      <Gallery />
-    </div>
+    <HelmetProvider>
+      <div className='Home'>
+        <Helmet>
+          <title>HOMEPAGE</title>
+        </Helmet>
+        <Banner image={background} isText={true} />
+        <Gallery />
+      </div>
+    </HelmetProvider>
   );
 }
 
