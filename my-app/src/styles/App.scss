@@ -13,27 +13,35 @@ html {
   height: 100vh;
 }
 body {
+  position: relative;
   max-height: 100vh;
   margin: 0;
 }
 
+$footer-height: 210px;
+$footer-margin: 80px;
+
 #root {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  //position: relative;
-  max-width: 1400px;
-  height: 100%;
-  margin: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: calc($footer-height + $footer-margin);
+
   // padding-left: 200px;
   // background-color: rgba(255, 255, 255, 0.636);
   // background-color: rgba(16, 16, 16, 0.636);
 }
+
+header,
 main {
-  height: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 $saumon: #ff6060;
 $white: white;
 $grey: #f7f7f7;

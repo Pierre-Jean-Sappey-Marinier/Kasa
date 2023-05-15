@@ -90,7 +90,7 @@
 
   .stars {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 10px;
   }
   .expander {
@@ -128,7 +128,7 @@
       flex-direction: column;
       width: 100%;
       margin-bottom: 15px;
-      align-items: start;
+      align-items: flex-start;
     }
     .tags {
       display: flex;
@@ -162,9 +162,7 @@
       padding-top: 20px;
       padding-bottom: 20px;
     }
-    .picture {
-      // width: 100%;
-    }
+
     // .stars {
     //   gap: 10px;
     //   justify-content: start;
