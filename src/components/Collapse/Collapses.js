@@ -1,11 +1,9 @@
-import "./Collapse.scss";
-import aproposData from "../../data/aproposData.json";
-import React, { useState } from "react";
-import Collapse from "./Collapse";
+import './Collapse.scss';
+import Collapse from './Collapse';
 
 function Collapses({ props }) {
   return (
-    <ul className="Collapses">
+    <ul className='Collapses'>
       {props.map((rule) => {
         return (
           <Collapse

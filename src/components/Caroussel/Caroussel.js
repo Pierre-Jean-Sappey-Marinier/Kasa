@@ -1,7 +1,6 @@
 //create a slider  with smooth transitions on react
 import React, { useState, useRef, useEffect } from 'react';
 import './Caroussel.scss';
-import data from '../../data/data.json';
 import arrow from '../../assets/arrow.png';
 // import "./Caroussel.scss";
 
@@ -40,7 +39,7 @@ function Caroussel({ slides }) {
   ///////////////
   return (
     <div className='caroussel'>
-      <img src={arrow} className='left-arrow' onClick={prevSlide} />
+      <img src={arrow} alt='' className='left-arrow' onClick={prevSlide} />
       <ul className='slider'>
         {slides.map((urlImage, indexImage) => {
           return (
@@ -63,7 +62,7 @@ function Caroussel({ slides }) {
           );
         })}
       </ul>
-      <img src={arrow} className='right-arrow' onClick={nextSlide} />
+      <img src={arrow} alt='' className='right-arrow' onClick={nextSlide} />
       <div className='count'>
         {index + 1}/{length}
       </div>

@@ -1,10 +1,7 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import "./ProfilePageInformation.scss";
-import data from "../../data/data.json";
-import StarRating from "./StarRating";
-// import CollapseOnClick from "../Collapse/CollapseOnClick";
-import Collapse from "../Collapse/Collapse";
+import React from 'react';
+import './ProfilePageInformation.scss';
+import StarRating from './StarRating';
+import Collapse from '../Collapse/Collapse';
 
 const ProfilePageInformations = ({ dataOfOneLocation }) => {
   if (Array.isArray(dataOfOneLocation.equipments)) {
@@ -13,19 +10,19 @@ const ProfilePageInformations = ({ dataOfOneLocation }) => {
   console.log();
 
   return (
-    <section className="infos">
-      <div className="locationAndPictureAndStar">
-        <div className="title-location-tags">
-          <div className="title-picture">
-            <div className="title"> {dataOfOneLocation.title} </div>
+    <section className='infos'>
+      <div className='locationAndPictureAndStar'>
+        <div className='title-location-tags'>
+          <div className='title-picture'>
+            <div className='title'> {dataOfOneLocation.title} </div>
           </div>
-          <div className="location">{dataOfOneLocation.location}</div>
+          <div className='location'>{dataOfOneLocation.location}</div>
 
-          <div className="tags-star">
-            <div className="tags">
+          <div className='tags-star'>
+            <div className='tags'>
               {dataOfOneLocation.tags.map((tag, i) => {
                 return (
-                  <p key={i} className="tag">
+                  <p key={i} className='tag'>
                     {tag}
                   </p>
                 );
@@ -33,33 +30,33 @@ const ProfilePageInformations = ({ dataOfOneLocation }) => {
             </div>
           </div>
         </div>
-        <div className="identityAndStar">
-          <div className="identité">
-            <div className="name"> {dataOfOneLocation.host.name} </div>
-            <picture className="picture_content">
+        <div className='identityAndStar'>
+          <div className='identité'>
+            <div className='name'> {dataOfOneLocation.host.name} </div>
+            <picture className='picture_content'>
               <img
-                className="picture"
+                className='picture'
                 src={dataOfOneLocation.host.picture}
-                alt="Logo"
+                alt='Logo'
               />
             </picture>
           </div>
-          <div className="stars">
-            <StarRating className="star" rating={dataOfOneLocation.rating} />
+          <div className='stars'>
+            <StarRating className='star' rating={dataOfOneLocation.rating} />
           </div>
         </div>
       </div>
-      <div className="collapse-description-equipment">
-        <div className="collapses_informations_page">
+      <div className='collapse-description-equipment'>
+        <div className='collapses_informations_page'>
           <Collapse
-            className="collapse_description"
-            title="Description"
+            className='collapse_description'
+            title='Description'
             description={dataOfOneLocation.description}
           />
 
           <Collapse
-            className="collapse_equipment"
-            title="Equipements"
+            className='collapse_equipment'
+            title='Equipements'
             description={dataOfOneLocation.equipments}
           />
         </div>

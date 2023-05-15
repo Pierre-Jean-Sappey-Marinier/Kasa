@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import logokasa from './../../assets/logokasa.svg';
 import('./Footer.scss');
 
