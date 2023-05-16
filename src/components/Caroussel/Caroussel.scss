@@ -35,7 +35,7 @@
       position: absolute;
       width: 100%;
       height: 99%;
-      content: "";
+      content: '';
       top: 0;
       left: 0;
       opacity: 1;
@@ -76,5 +76,17 @@
 
     transform: rotate(0.5turn);
     cursor: pointer;
+  }
+  @media screen and (max-width: 767px) {
+    .right-arrow {
+      height: 40px;
+      top: 42%;
+      right: 3%;
+    }
+    .left-arrow {
+      height: 40px;
+      top: 42%;
+      right: 3%;
+    }
   }
 }
