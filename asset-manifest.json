@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.70feff9d.css",
-    "main.js": "/static/js/main.a79ed9ee.js",
-    "static/css/465.a6f25148.chunk.css": "/static/css/465.a6f25148.chunk.css",
-    "static/js/465.24ecfa3f.chunk.js": "/static/js/465.24ecfa3f.chunk.js",
-    "static/media/background_apropos.png": "/static/media/background_apropos.640955dab8c7bff25514.png",
-    "static/media/background.png": "/static/media/background.19221376a0aa2549c135.png",
-    "static/media/logokasa.svg": "/static/media/logokasa.a6101328193bb3191cbcb50c120ec0d1.svg",
-    "index.html": "/index.html",
-    "static/media/star.svg": "/static/media/star.30b8963e66a47777ef47296f505567be.svg",
-    "static/media/stargrey.svg": "/static/media/stargrey.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
-    "main.70feff9d.css.map": "/static/css/main.70feff9d.css.map",
-    "main.a79ed9ee.js.map": "/static/js/main.a79ed9ee.js.map",
-    "465.a6f25148.chunk.css.map": "/static/css/465.a6f25148.chunk.css.map",
-    "465.24ecfa3f.chunk.js.map": "/static/js/465.24ecfa3f.chunk.js.map"
+    "main.css": "/Kasa/static/css/main.70feff9d.css",
+    "main.js": "/Kasa/static/js/main.03bce2a8.js",
+    "static/css/465.a6f25148.chunk.css": "/Kasa/static/css/465.a6f25148.chunk.css",
+    "static/js/465.24ecfa3f.chunk.js": "/Kasa/static/js/465.24ecfa3f.chunk.js",
+    "static/media/background_apropos.png": "/Kasa/static/media/background_apropos.640955dab8c7bff25514.png",
+    "static/media/background.png": "/Kasa/static/media/background.19221376a0aa2549c135.png",
+    "static/media/logokasa.svg": "/Kasa/static/media/logokasa.a6101328193bb3191cbcb50c120ec0d1.svg",
+    "index.html": "/Kasa/index.html",
+    "static/media/star.svg": "/Kasa/static/media/star.30b8963e66a47777ef47296f505567be.svg",
+    "static/media/stargrey.svg": "/Kasa/static/media/stargrey.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
+    "main.70feff9d.css.map": "/Kasa/static/css/main.70feff9d.css.map",
+    "main.03bce2a8.js.map": "/Kasa/static/js/main.03bce2a8.js.map",
+    "465.a6f25148.chunk.css.map": "/Kasa/static/css/465.a6f25148.chunk.css.map",
+    "465.24ecfa3f.chunk.js.map": "/Kasa/static/js/465.24ecfa3f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70feff9d.css",
-    "static/js/main.a79ed9ee.js"
+    "static/js/main.03bce2a8.js"
   ]
 }
