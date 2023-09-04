@@ -1,6 +1,12 @@
 import React from "react";
 import "../Gallery/Gallery.scss";
-const Card = ({ title, id, cover }) => {
+type CardProps = {
+  title: string;
+  id: string;
+  cover: string;
+};
+
+const Card: React.FC<CardProps> = ({ title, id, cover }) => {
   return (
     <div id={id} className="img_gallery">
       <img className="image" src={cover} alt="" />

@@ -11,11 +11,7 @@ const Gallery = () => {
         return (
           <React.Fragment key={data.id}>
             <Link to={`/appartements/${data.id}`} className="linkToCard">
-              <Card
-                // id={data.id}
-                cover={data.cover}
-                title={data.title}
-              />
+              <Card id={data.id} cover={data.cover} title={data.title} />
             </Link>
           </React.Fragment>
         );

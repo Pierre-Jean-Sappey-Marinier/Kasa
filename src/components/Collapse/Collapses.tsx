@@ -1,9 +1,13 @@
-import './Collapse.scss';
-import Collapse from './Collapse';
+import "./Collapse.scss";
+import Collapse from "./Collapse";
 
-function Collapses({ props }) {
+type CollapsesProps = {
+  props: Array<{ id: string; description: string; title: string }>;
+};
+
+function Collapses({ props }: CollapsesProps) {
   return (
-    <ul className='Collapses'>
+    <ul className="Collapses">
       {props.map((rule) => {
         return (
           <Collapse

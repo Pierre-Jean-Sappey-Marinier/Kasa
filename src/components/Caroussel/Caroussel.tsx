@@ -1,14 +1,16 @@
 //create a slider  with smooth transitions on react
-import React, { useState, useRef, useEffect } from 'react';
-import './Caroussel.scss';
-import arrow from '../../assets/arrow.png';
-// import "./Caroussel.scss";
+import React, { useState, useRef, useEffect } from "react";
+import "./Caroussel.scss";
+import arrow from "../../assets/arrow.png";
 
-function Caroussel({ slides }) {
+type CarousselProps = {
+  slides: string[];
+};
+
+function Caroussel({ slides }: CarousselProps) {
   ////////////////
   const [index, setIndex] = useState(0);
-  const timeout = useRef(null);
-
+  const timeoutRef = useRef<number | null>(null);
   const length = slides.length;
 
   ///////////////
@@ -16,11 +18,11 @@ function Caroussel({ slides }) {
     const nextSlide = () => {
       setIndex((prevIndex) => (prevIndex === length - 1 ? 0 : prevIndex + 1));
     };
-    timeout.current = setTimeout(nextSlide, 30000);
+    timeoutRef.current = window.setTimeout(nextSlide, 30000);
 
     return function () {
-      if (timeout.current) {
-        clearTimeout(timeout.current);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
       }
     };
   }, [index, length]);
@@ -38,32 +40,32 @@ function Caroussel({ slides }) {
 
   ///////////////
   return (
-    <div className='caroussel'>
-      <img src={arrow} alt='' className='left-arrow' onClick={prevSlide} />
-      <ul className='slider'>
+    <div className="caroussel">
+      <img src={arrow} alt="" className="left-arrow" onClick={prevSlide} />
+      <ul className="slider">
         {slides.map((urlImage, indexImage) => {
           return (
             <li
               key={urlImage}
               className={
-                'slide' + (indexImage === index ? '-active' : ' hidden')
+                "slide" + (indexImage === index ? "-active" : " hidden")
               }
               // className={indexImage === index ? "slide-active" : "slide"}
             >
               {indexImage === index && (
                 <img
                   src={urlImage}
-                  alt=''
-                  className='image-logement'
-                  index={index}
+                  alt=""
+                  className="image-logement"
+                  // index={index}
                 />
               )}
             </li>
           );
         })}
       </ul>
-      <img src={arrow} alt='' className='right-arrow' onClick={nextSlide} />
-      <div className='count'>
+      <img src={arrow} alt="" className="right-arrow" onClick={nextSlide} />
+      <div className="count">
         {index + 1}/{length}
       </div>
     </div>

@@ -2,8 +2,13 @@ import React from "react";
 import star from "../../assets/star.svg";
 import stargrey from "../../assets/stargrey.svg";
 
-const StarRating = ({ rating }) => {
-  const laforet = [...Array(parseInt(5, 10)).keys()];
+type StarRatingProps = {
+  rating: number;
+  className?: string;
+};
+
+const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
+  const laforet = [...Array(parseInt("5", 10)).keys()];
 
   return (
     <>
